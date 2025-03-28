@@ -1,0 +1,78 @@
+/* Defining Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+/* Defining Colors */
+:root {
+    --accent: #ED8133;
+    --secondary-bg: #1D1D1D;
+    --primary-bg: #272727;
+    --white: #FFFFFF;
+}
+
+.noteWindow {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+    max-width: 800px;
+    height: 70%;
+    max-height: 600px;
+
+    z-index: 1000;
+    overflow: hidden;
+}
+
+#noteTitle {
+    background-color: var(--secondary-bg);
+    font-family: 'Rosario', sans-serif;
+    font-size: 2em;
+    color: var(--accent);
+    height: 12%;
+
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+
+    border-bottom-width: 2px;
+    border-bottom-color: var(--accent);
+    margin-bottom: 20px;
+}
+
+#noteTitle::placeholder {
+    opacity: 1;
+    color: var(--accent);
+}
+
+#noteContent {
+    background-color: var(--primary-bg);
+
+    height: 68%;
+
+    resize: none;
+    font-family: 'Rosario', sans-serif;
+    font-size: 1em;
+    color: var(--white);
+    border-width: 0px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#saveNoteBtn,
+#cancelNoteBtn {
+    font-size: 0.8em;
+    padding: 0.6em;
+    margin-bottom: 0px;
+}

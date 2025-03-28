@@ -1,0 +1,43 @@
+/* Defining Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+/* Defining Colors */
+:root {
+    --accent: #ED8133;
+    --secondary-bg: #1D1D1D;
+    --primary-bg: #272727;
+    --white: #FFFFFF;
+}
+
+#noteContainer {
+    display: grid;
+    container: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    margin-bottom: 60px;
+}
+
+.noteDiv {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.noteDiv:hover {
+    filter: drop-shadow(0 0 0.5rem var(--accent));
+    transition: 0.3s;
+}
+
+.noteTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.deleteIcon {
+    position: relative;
+    float: right;
+    width: 20px;
+    height: 20px;
+}
