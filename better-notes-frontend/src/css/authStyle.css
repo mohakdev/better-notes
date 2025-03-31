@@ -1,0 +1,83 @@
+/* Defining Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+/* Defining Colors */
+:root {
+    --accent: #ED8133;
+    --secondary-bg: #1D1D1D;
+    --primary-bg: #272727;
+    --white: #FFFFFF;
+}
+
+
+.authPage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+}
+
+.authHeader {
+    font-family: "Rosario", sans-serif;
+    text-align: center;
+}
+
+.authHeader h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.authHeader h4 {
+    font-size: 1.4em;
+    font-weight: lighter;
+    color: var(--white);
+}
+
+.authBox {
+    min-width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 16px;
+    border-radius: 10px;
+    background-color: var(--secondary-bg);
+}
+
+.authBox h3 {
+    font-family: "Rosario", sans-serif;
+    font-size: 2em;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.authBox input {
+    font-family: "Rosario", sans-serif;
+    font-size: 1em;
+    color: var(--white);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary-bg);
+}
+
+.authBox a {
+    font-family: "Rosario", sans-serif;
+    font-size: 0.8em;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.authBtn {
+    font-family: "Rosario", sans-serif;
+    font-size: 1.2em;
+    width: 60%;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    padding: 6px;
+}

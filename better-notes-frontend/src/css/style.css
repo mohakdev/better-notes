@@ -9,6 +9,9 @@
     --white: #FFFFFF;
 }
 
+button {
+    cursor: pointer;
+}
 
 body {
     background-color: var(--primary-bg);

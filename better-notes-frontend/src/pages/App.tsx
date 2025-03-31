@@ -70,9 +70,10 @@ function App() {
           </div>
         ))}
       </div>
+      
       <NoteWindow onSave={(title : string, content : string) => AddOrModifyNote(title, content)} 
-      note={selectedNote} showNoteWindow={showNoteWindow} 
-      onCancel={() => CloseNote()}/>
+      note={selectedNote} showNoteWindow={showNoteWindow} onCancel={() => CloseNote()}/>
+
       <div className="footer">
         <button id='addNoteBtn' className = 'mainBtn' onClick={() => OpenNote(null)}>
           Add Note
