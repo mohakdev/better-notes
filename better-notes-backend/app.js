@@ -71,6 +71,20 @@ app.post('/login', checkSchema(userValidationSchema), async (req, res) => {
     return res.status(200).json({ message: 'User logged in successfully', accessToken });
 });
 
+app.get('/fetch-user', authToken, async (req, res) => {
+    try {
+        const user = req.user;
+        const isUser = await userModel.findOne({ _id: user._id });
+        if (!isUser) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        return res.status(200).json(user);
+    }
+    catch {
+        return res.status(500).json({ message: "Internal Server Error" });
+    }
+});
+
 app.use('/notes', notesRouter); // Use the notes router for all routes starting with /notes
 
 
