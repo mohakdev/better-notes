@@ -39,8 +39,8 @@ function App() {
         setNotes(response.data);
       }
     }
-    catch {
-      console.log("An unexpected error occured");
+    catch (error) {
+      console.log("An unexpected error occured " + error);
     }
   }
   useEffect(() => {
@@ -92,7 +92,7 @@ function App() {
       }
     }
     catch (error) {
-      console.log("Unexpected error occured");
+      console.log("Unexpected error occured " + error);
     }
   }
   async function UpdateNote (note: NoteObject) {
@@ -107,7 +107,7 @@ function App() {
       }
     }
     catch (error) {
-      console.log("Unexpected error occured");
+      console.log("Unexpected error occured " + error);
     }
   }
   async function DeleteNote (e : React.MouseEvent<HTMLImageElement, MouseEvent>,note: NoteObject) {
@@ -119,7 +119,7 @@ function App() {
       }
     }
     catch (error) {
-      console.log("Unexpected error occured");
+      console.log("Unexpected error occured " + error);
     }
   }
 
