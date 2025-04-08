@@ -22,7 +22,6 @@ function App() {
       const response = await axiosInstance.get('/fetch-user');
       if(response.data && response.data.user) {
         setUserInfo(response.data.user);
-        console.log(userInfo);
       }
     }
     catch (error : any) {
@@ -47,6 +46,7 @@ function App() {
   useEffect(() => {
     getAllNotes();
     getUserInfo();
+    console.log(userInfo);
     return () => {}
   }, []);
   function logOut() {
