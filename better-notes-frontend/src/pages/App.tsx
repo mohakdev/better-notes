@@ -22,6 +22,7 @@ function App() {
       const response = await axiosInstance.get('/fetch-user');
       if(response.data && response.data.user) {
         setUserInfo(response.data.user);
+        console.log(userInfo);
       }
     }
     catch (error : any) {
